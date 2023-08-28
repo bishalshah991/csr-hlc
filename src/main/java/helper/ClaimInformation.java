@@ -51,12 +51,14 @@ public class ClaimInformation extends BasePage {
         }
     }
 
-    public void Enter_Spoke_with() throws IOException, ParseException {
+    public void Enter_Spoke_with() throws IOException, ParseException, InterruptedException {
+        Thread.sleep(3000);
         String textData = new ReadJSonData().Read_the_value_from_json(path,"SpokeWith");
         type(SpokeWith,textData);
     }
 
-    public void Relationship(){
+    public void Relationship() throws InterruptedException {
+        Thread.sleep(3000);
         click(Relationship);
         WaitForPresenceOfElement(TextAttorney,10);
         for (WebElement element : getEls(RelationshipList)){
@@ -65,18 +67,21 @@ public class ClaimInformation extends BasePage {
             }
         }
     }
-    public void EnterPhoneNumber() throws IOException, ParseException {
+    public void EnterPhoneNumber() throws IOException, ParseException, InterruptedException {
+        Thread.sleep(3000);
         String TestData = new ReadJSonData().Read_the_value_from_json(path,"PhoneNumber");
         type(PhoneNumber,TestData);
         tab(PhoneNumber);
     }
 
-    public void Insured_Date_of_Birth() throws IOException, ParseException {
+    public void Insured_Date_of_Birth() throws IOException, ParseException, InterruptedException {
+        Thread.sleep(3000);
         String TestData = new ReadJSonData().Read_the_value_from_json(path,"Date_of_Birth");
         type(Date_of_Birth,TestData);
     }
 
     public void Click_Accept_Button() throws InterruptedException {
+        Thread.sleep(3000);
         click(CheckBox);
         click(AcceptButton);
         WaitForPresenceOfElement(StartClaimButton,10);

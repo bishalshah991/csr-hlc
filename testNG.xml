@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Test">
+        <parameter name = "browser" value="${browser_name}"/>
+        <parameter name = "url" value="${url_name}"/>
+        <parameter name = "username" value="${user_name}"/>
+        <parameter name = "password" value="${password_name}"/>
+        <parameter name = "policySearch" value="${policy1}"/>
+        <parameter name = "policySearch1" value="${policy2}"/>
+        <!--parameter name = "Dob1" value="${dob_value1}"/-->
+        <parameter name = "author" value="${author_name}"/>
+        <classes>
+            <class name="testCase.CSR.Login_Page_test"/>
+            <class name="testCase.CSR.Claim_Information_Test"></class>
+            <class name="testCase.CSR.End_to_End_Test"/>
+            <class name="testCase.CSR.My_Profile_Test"></class>
+            <class name="testCase.CSR.Void_Policy"></class>
+            <!--class name="testCase.CSR.StartFNOLTest"></class-->
+        </classes>
+    </test>
+</suite>
